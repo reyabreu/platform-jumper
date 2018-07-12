@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/SolidPlatform.gd" type="Script" id=1]
+[ext_resource path="res://assets/platforms/ground_grass_small.png" type="Texture" id=2]
+
+[node name="GrassPlatformSmall" type="Area2D"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -99.2657, -40.0767, -87.0772, -49.0388, 84.6376, -49.0388, 100.411, -38.6427, 100.052, -20.0015, 74.9585, 49.5448, -78.115, 40.5827, -101.058, -22.5109 )
+
+
